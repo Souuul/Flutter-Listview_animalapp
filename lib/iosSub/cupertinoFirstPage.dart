@@ -33,7 +33,7 @@ class CupertinoFirstPage extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  height: 2,
+                  height: 1,
                   color: CupertinoColors.black,
                 )
               ],
