@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:listview_example/animalItem.dart';
-import 'package:listview_example/cupertinoWidget/cupertinowidget.dart';
+import 'package:listview_example/cupertinoWidget/cupertinoPicker.dart';
+import 'package:listview_example/cupertinoWidget/cupertinoWidget.dart';
 import 'package:listview_example/iosSub/cupertinoFirstPage.dart';
 import 'package:listview_example/iosSub/cupertinoSecondPage.dart';
 
@@ -24,6 +25,7 @@ class _CupertinoMain extends State<CupertinoMain> {
     super.initState();
     tabBar = CupertinoTabBar(items: <BottomNavigationBarItem>[
       BottomNavigationBarItem(icon: Icon(CupertinoIcons.home)),
+      BottomNavigationBarItem(icon: Icon(CupertinoIcons.add)),
       BottomNavigationBarItem(icon: Icon(CupertinoIcons.add)),
       BottomNavigationBarItem(icon: Icon(CupertinoIcons.add)),
     ]);
@@ -57,6 +59,8 @@ class _CupertinoMain extends State<CupertinoMain> {
               );
             } else if (value == 1){
               return CupertinoSecondPage(animalList: animalList);
+            } else if (value == 2) {
+              return CupertinoDesignPage();
             } else {
               return CupertinoOtherPage();
             }
